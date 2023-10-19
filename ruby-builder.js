@@ -9,7 +9,7 @@ const common = require('./common')
 const rubyBuilderVersions = require('./ruby-builder-versions')
 
 const builderReleaseTag = 'toolcache'
-const releasesURL = 'https://github.com/ruby/ruby-builder/releases'
+const releasesURL = 'https://github.com/burgestrand/ruby-builder/releases'
 
 const windows = common.windows
 
@@ -30,7 +30,7 @@ export async function install(platform, engine, version) {
         core.error(
           `The current runner (${common.getOSNameVersionArch()}) was detected as self-hosted because ${common.selfHostedRunnerReason()}.\n` +
           `In such a case, you should install Ruby in the $RUNNER_TOOL_CACHE yourself, for example using https://github.com/rbenv/ruby-build\n` +
-          `You can take inspiration from this workflow for more details: https://github.com/ruby/ruby-builder/blob/master/.github/workflows/build.yml\n` +
+          `You can take inspiration from this workflow for more details: https://github.com/burgestrand/ruby-builder/blob/master/.github/workflows/build.yml\n` +
           `$ ruby-build ${rubyBuildDefinition} ${toolCacheRubyPrefix}\n` +
           `Once that completes successfully, mark it as complete with:\n` +
           `$ touch ${common.toolCacheCompleteFile(toolCacheRubyPrefix)}\n` +
